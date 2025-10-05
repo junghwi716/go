@@ -1,0 +1,5 @@
+# Update https://your-domain.com/ to the actual deployed domain
+User-agent: *
+Allow: /
+
+Sitemap: https://your-domain.com/sitemap.xml
