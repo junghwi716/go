@@ -1,4 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Sticky header scroll detection ──────────────────
+  const siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    const onScroll = () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // initial check
+  }
+
+  // ── Hamburger / mobile drawer ────────────────────────
+  const navToggle = document.querySelector('.nav-toggle');
+  const navDrawer = document.querySelector('.nav-drawer');
+  if (navToggle && navDrawer) {
+    const open = () => {
+      navDrawer.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', '메뉴 닫기');
+      navDrawer.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      navDrawer.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', '메뉴 열기');
+      navDrawer.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    navToggle.addEventListener('click', () => {
+      navDrawer.classList.contains('open') ? close() : open();
+    });
+
+    // Close on link click
+    navDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', close);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navDrawer.classList.contains('open')) close();
+    });
+  }
+
+  // ── Gallery lightbox ────────────────────────────────
   const items = Array.from(document.querySelectorAll('.gallery-item'));
   if (!items.length) return;
 

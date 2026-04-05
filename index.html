@@ -18,9 +18,9 @@
   <meta name="twitter:title" content="서중휘 프로 바둑센터" />
   <meta name="twitter:description" content="프로 7단 서중휘가 직접 지도하는 바둑센터. 창의력·지구력·인성을 키우는 체계적인 커리큘럼." />
   <meta name="twitter:image" content="./images/image.jpeg" />
-  <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="./images/icon.png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="./images/icon.png" />
+  <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="./favicon.png" />
   <link rel="canonical" href="https://seoprobaduk.co.kr/" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="stylesheet" href="style.css" />
@@ -66,91 +66,173 @@
 
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
-  <header class="hero" id="home">
+
+  <header class="site-header" id="home">
     <div class="container">
       <nav class="top-bar" aria-label="주요 메뉴">
         <a href="#home" class="brand" aria-label="홈으로 이동">
-          <img src="./images/icon.png" alt="" class="brand-icon" aria-hidden="true" />
-          서중휘 프로 바둑센터
+          <img src="./favicon.png" alt="" class="brand-icon" aria-hidden="true" />
+          <span class="brand-name">서중휘 프로 바둑센터</span>
         </a>
-        <ul class="nav-links">
-          <li><a href="#goals">수업 목표</a></li>
-          <li><a href="#gallery">바둑센터</a></li>
-          <li><a href="#lesson">레슨비</a></li>
-          <li><a href="#fees">단증/급증</a></li>
-          <li><a href="#career">경력</a></li>
-          <li><a href="#hours">운영시간</a></li>
-          <li><a href="#contact" class="cta-link">상담 신청</a></li>
+        <ul class="nav-links" role="list">
+          <li><a href="#about">원장 소개</a></li>
+          <li><a href="#lesson">레슨 안내</a></li>
+          <li><a href="#gallery">센터 소개</a></li>
+          <li><a href="#contact" class="cta-btn">상담 신청</a></li>
         </ul>
+        <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
+    </div>
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about">원장 소개</a></li>
+        <li><a href="#lesson">레슨 안내</a></li>
+        <li><a href="#gallery">센터 소개</a></li>
+        <li><a href="#contact" class="cta-btn">상담 신청</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
       <div class="hero-content">
-        <div>
+        <div class="hero-copy">
           <p class="badge" aria-label="대상">어린이 · 청소년 · 성인</p>
-          <h1>AI 시대 사고력, 바둑에서 길을 찾다</h1>
+          <h1>
+            <span class="hero-title-line">AI 시대의 사고력</span>
+            <span class="hero-title-line">바둑에서 길을 찾다</span>
+          </h1>
           <p class="hero-text">
             바둑 실력을 키우고 싶은 모든 분들께, 실전 중심의 지도와 AI 분석
             피드백으로 단기간에 달라지는 학습 경험을 제공합니다.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:010-5236-2091" aria-label="전화 상담으로 연결">
-              <span class="btn-label">전화 상담</span>
-              <span class="btn-sub">010-5236-2091</span>
-            </a>
-            <a class="btn btn-outline" href="#lesson">레슨비 안내</a>
-            <a class="btn btn-kakao" href="">
-              <span class="sr-only">카카오톡 상담</span>
+            <a class="btn btn-kakao" href="" aria-label="카카오톡 문의하기">
               <img src="./images/kakao.png" alt="" class="kakao-icon" aria-hidden="true" />
+              <span>카카오톡 문의하기</span>
+            </a>
+            <a class="btn btn-phone" href="tel:010-5236-2091" aria-label="전화문의 010-5236-2091">
+              <span>전화문의</span>
+              <span>010-5236-2091</span>
             </a>
           </div>
         </div>
-        <aside class="hero-figure" aria-label="센터 소개 이미지">
-          <img src="./images/image.jpeg" alt="서중휘 프로 바둑센터 수업 사진" loading="lazy" />
-          <div class="hero-figure-overlay">
-            <h2>서중휘 프로 바둑센터 특징</h2>
-            <ul>
-              <li><span>01</span>프로 7단 서중휘 원장 직강</li>
-              <li><span>02</span>AI 분석 기반 실전 피드백</li>
-              <li><span>03</span>기초부터 입단까지 맞춤 커리큘럼</li>
-            </ul>
-          </div>
-        </aside>
       </div>
     </div>
-  </header>
+  </section>
 
   <main id="main">
-    <!-- 수업 목표 -->
-    <section id="goals" class="section">
+
+    <!-- 원장 소개 -->
+    <section id="about" class="section section-about">
       <div class="container">
-        <header class="section-title">
-          <h2>수업 목표</h2>
-          <p>창의력 · 지구력 · 올바른 인성</p>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <h3>창의력</h3>
-            <p>
-              바둑을 통해 여러 상황에서의 문제 해결을 스스로 해 나가면서
-              창의적인 생각이 저절로 생기게 됩니다.
-            </p>
-          </article>
-          <article class="card">
-            <h3>지구력</h3>
-            <p>
-              한 판의 대국을 치르려면 오래 앉아 있어야 하는데, 자연스럽게
-              집중해서 오래 앉아 있을 수 있는 힘이 길러집니다.
-            </p>
-          </article>
-          <article class="card">
-            <h3>올바른 인성</h3>
-            <p>
-              대국이 끝나면 승자는 패자를 배려하고, 패자는 결과를 겸허히
-              승복하는 자세를 배우게 됩니다.
-            </p>
-          </article>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-eyebrow">프로 7단 · 18년 도장 경력</p>
+            <h2>서중휘 프로가 직접 가르칩니다</h2>
+            <p class="about-desc">서울 유명 바둑도장 3곳에서 수석사범으로 18년간 학생들을 지도한 경험을 바탕으로, 기초부터 입단까지 체계적인 커리큘럼을 제공합니다.</p>
+            <ul class="about-career">
+              <li>
+                <span class="career-badge">2005</span>
+                <strong>프로 입단</strong>
+              </li>
+              <li>
+                <span class="career-badge">18년</span>
+                <strong>수석사범 근속</strong>
+                <span class="career-meta">서울 유명 도장</span>
+              </li>
+              <li>
+                <span class="career-badge">16강</span>
+                <strong>KBS 바둑왕전</strong>
+                <span class="career-meta">본선 진출</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about-photo">
+            <img src="./images/seo_pro.jpg" alt="서중휘 프로 7단 원장" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- 레슨비 -->
+    <section id="lesson" class="section section-pricing">
+      <div class="container">
+        <header class="section-title">
+          <h2>레슨비 안내</h2>
+          <p class="subline">학생·성인 (1시간 30분 기준)</p>
+        </header>
+        <div class="curriculum-strip">
+          <span class="curriculum-label">커리큘럼 포함</span>
+          <div class="curriculum-tags">
+            <span>대국 복기</span>
+            <span>포석</span>
+            <span>정석 변화</span>
+            <span>중반 운영</span>
+            <span>수읽기 훈련</span>
+            <span>AI 로봇 대국</span>
+          </div>
+        </div>
+        <div class="plans-grid">
+          <article class="plan-card">
+            <p class="plan-name">월 4회</p>
+            <p class="plan-price"><strong>20</strong><span>만원</span></p>
+            <p class="plan-sub">주 1회 권장</p>
+          </article>
+          <article class="plan-card featured" aria-label="추천 요금제">
+            <span class="plan-badge">추천</span>
+            <p class="plan-name">월 8회</p>
+            <p class="plan-price"><strong>36</strong><span>만원</span></p>
+            <p class="plan-sub">주 2회 집중 훈련</p>
+          </article>
+          <article class="plan-card">
+            <p class="plan-name">월 12회</p>
+            <p class="plan-price"><strong>45</strong><span>만원</span></p>
+            <p class="plan-sub">주 3회 집중 훈련</p>
+          </article>
+          <article class="plan-card">
+            <p class="plan-name">10회권</p>
+            <p class="plan-price"><strong>40</strong><span>만원</span></p>
+            <p class="plan-sub">횟수제 자유 이용</p>
+          </article>
+        </div>
+        <div class="class-types">
+          <div class="class-type">
+            <h4 class="class-type-label">학생반</h4>
+            <div class="class-type-tags">
+              <span>선수반</span><span>유단자반</span><span>중·고급반</span>
+            </div>
+          </div>
+          <div class="class-divider"></div>
+          <div class="class-type">
+            <h4 class="class-type-label">성인반</h4>
+            <div class="class-type-tags">
+              <span>중·고급</span><span>유단자</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 중간 CTA 배너 -->
+    <div class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner">
+          <p class="cta-banner-text">바둑이 궁금하신가요? <strong>무료 상담</strong>을 신청해보세요.</p>
+          <div class="cta-banner-actions">
+            <a class="btn btn-kakao" href="" aria-label="카카오톡 문의">
+              <img src="./images/kakao.png" alt="" class="kakao-icon" aria-hidden="true" />
+              <span>카카오톡 문의</span>
+            </a>
+            <a class="btn cta-phone-btn" href="tel:010-5236-2091">전화 문의</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- 바둑센터 소개 (갤러리) -->
     <section id="gallery" class="section section-gallery">
@@ -182,154 +264,8 @@
       </div>
     </section>
 
-    <!-- 레슨비 -->
-    <section id="lesson" class="section section-pricing">
-      <div class="container">
-        <header class="section-title">
-          <h2>서중휘프로 바둑센터 레슨비</h2>
-          <p class="subline">학생·성인 (1시간 30분 기준)</p>
-        </header>
-        <div class="pricing-wrap">
-          <article class="card curriculum-card">
-            <h3>커리큘럼</h3>
-            <ul class="list curriculum-list">
-              <li>대국 복기</li>
-              <li>포석</li>
-              <li>정석 변화</li>
-              <li>중반 운영</li>
-              <li>수읽기 훈련</li>
-              <li>AI 로봇과 대국 등</li>
-            </ul>
-          </article>
-          <div class="plans">
-            <article class="plan-card">
-              <h3 class="plan-name">월 4회</h3>
-              <p class="plan-price"><strong>20</strong><span>만원</span></p>
-              <p class="muted">주 1회 권장</p>
-            </article>
-            <article class="plan-card featured" aria-label="추천 요금제">
-              <h3 class="plan-name">월 8회</h3>
-              <p class="plan-price"><strong>36</strong><span>만원</span></p>
-              <p class="muted">주 2회 집중 훈련</p>
-            </article>
-            <article class="plan-card">
-              <h3 class="plan-name">월 12회</h3>
-              <p class="plan-price"><strong>45</strong><span>만원</span></p>
-              <p class="muted">주 3회 집중 훈련</p>
-            </article>
-            <article class="plan-card">
-              <h3 class="plan-name">10회</h3>
-              <p class="plan-price"><strong>40</strong><span>만원</span></p>
-              <p class="muted">횟수제 자유 이용</p>
-            </article>
-          </div>
-          <article class="plan-card lesson-card">
-            <h3 class="plan-name">학생반</h3>
-            <ul class="list">
-              <li>선수반</li>
-              <li>유단자반</li>
-              <li>중.고급반</li>
-            </ul>
-          </article>
-          <article class="plan-card lesson-card">
-            <h3 class="plan-name">성인반</h3>
-            <ul class="list">
-              <li>중.고급</li>
-              <li>유단자</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 단증/급증 인허료 -->
-    <section id="fees" class="section section-fees">
-      <div class="container">
-        <header class="section-title">
-          <h2>한국기원 공인 단증/급증 인허료</h2>
-          <p>정가 대비 합리적인 비용으로 등급 인증</p>
-        </header>
-        <div class="fees-wrapper">
-          <table class="fees-table" aria-describedby="fees-note">
-            <thead>
-              <tr>
-                <th scope="col">등급</th>
-                <th scope="col">인허료</th>
-                <th scope="col">정가</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1단</th>
-                <td>80,000원</td>
-                <td>150,000원</td>
-              </tr>
-              <tr>
-                <th scope="row">2단</th>
-                <td>150,000원</td>
-                <td>200,000원</td>
-              </tr>
-              <tr>
-                <th scope="row">3단</th>
-                <td>200,000원</td>
-                <td>250,000원</td>
-              </tr>
-              <tr>
-                <th scope="row">4단</th>
-                <td>300,000원</td>
-                <td>400,000원</td>
-              </tr>
-              <tr>
-                <th scope="row">5단</th>
-                <td>600,000원</td>
-                <td>800,000원</td>
-              </tr>
-              <tr>
-                <th scope="row">6단</th>
-                <td>1,000,000원</td>
-                <td>1,600,000원</td>
-              </tr>
-            </tbody>
-          </table>
-          <p id="fees-note" class="note">
-            표기 금액은 부가세 포함 기준이며, 상세 절차는 상담 후 안내
-            드립니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 경력 -->
-    <section id="career" class="section career">
-      <div class="container career-grid">
-        <section class="career-card">
-          <h2>교육경력</h2>
-          <ul class="list">
-            <li>2002–2013 서울 장수영바둑도장 수석사범</li>
-            <li>2014–2016 서울 충암바둑도장 수석사범</li>
-            <li>2016–2019 서울 양천대일바둑도장 수석사범</li>
-            <li>총 18년 도장사범 근속</li>
-          </ul>
-        </section>
-        <section class="career-card">
-          <h2>주요 경력</h2>
-          <ul class="list two-column">
-            <li>2005 프로 입단</li>
-            <li>2010 olleh배 본선</li>
-            <li>2011 제3회 BC카드배 세계대회 본선</li>
-            <li>2012 제4회 BC카드배 세계대회 본선</li>
-            <li>2015 렛츠런파크배 본선</li>
-            <li>2016 KB국민은행 퓨처스리그 본선</li>
-            <li>2018 제37기 KBS바둑왕전 본선 16강</li>
-            <li>2022 제16기 지지옥션배 신사 대 숙녀 연승대항전 본선 4연승</li>
-            <li>2025 제19기 지지옥션배 신사 대 숙녀 연승대항전 본선 선발</li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
-    <!-- 운영시간 / 위치 -->
-    <section id="hours" class="section section-hours">
+    <!-- 운영시간 · 위치 · 단증/급증 -->
+    <section id="info" class="section section-info">
       <span id="contact" aria-hidden="true"></span>
       <div class="container">
         <header class="section-title">
@@ -341,38 +277,29 @@
             <div class="card-head">
               <span class="icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 8v5l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <path d="M12 8v5l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
                 </svg>
               </span>
               <h3 id="hours-title">운영시간</h3>
             </div>
             <ul class="hours-list">
-              <li>
-                <span class="label">평일</span><span class="time">13:30 – 21:00</span>
-              </li>
-              <li>
-                <span class="label">토요일</span><span class="time">11:00 – 16:00</span>
-              </li>
+              <li><span class="label">평일</span><span class="time">13:30 – 21:00</span></li>
+              <li><span class="label">토요일</span><span class="time">11:00 – 16:00</span></li>
             </ul>
             <p class="note muted">공휴일은 사전 상담 후 방문해 주세요.</p>
           </section>
-
           <address class="info-card address-card" aria-labelledby="addr-title">
             <div class="card-head">
               <span class="icon" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2" />
                 </svg>
               </span>
               <h3 id="addr-title">위치</h3>
             </div>
-            <p class="metro-badge" aria-label="굴포천역 3번 출구 도보 5분">
-              굴포천역 3번 출구 · 도보 5분
-            </p>
+            <p class="metro-badge" aria-label="굴포천역 3번 출구 도보 5분">굴포천역 3번 출구 · 도보 5분</p>
             <p class="addr-text">
               <strong>인천 부평구 장제로213 3층</strong>
               <span>굴포천역 도보 5분, 건물 3층</span>
@@ -385,27 +312,33 @@
             </div>
           </address>
         </div>
+
+        <details class="fees-accordion">
+          <summary>한국기원 공인 단증/급증 인허료</summary>
+          <div class="fees-accordion-body">
+            <table class="fees-table" aria-describedby="fees-note">
+              <thead>
+                <tr>
+                  <th scope="col">등급</th>
+                  <th scope="col">인허료</th>
+                  <th scope="col">정가</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">1단</th><td>80,000원</td><td>150,000원</td></tr>
+                <tr><th scope="row">2단</th><td>150,000원</td><td>200,000원</td></tr>
+                <tr><th scope="row">3단</th><td>200,000원</td><td>250,000원</td></tr>
+                <tr><th scope="row">4단</th><td>300,000원</td><td>400,000원</td></tr>
+                <tr><th scope="row">5단</th><td>600,000원</td><td>800,000원</td></tr>
+                <tr><th scope="row">6단</th><td>1,000,000원</td><td>1,600,000원</td></tr>
+              </tbody>
+            </table>
+            <p id="fees-note" class="note">표기 금액은 부가세 포함 기준이며, 상세 절차는 상담 후 안내 드립니다.</p>
+          </div>
+        </details>
       </div>
     </section>
 
-    <!-- 원장 소개 -->
-    <section id="about" class="section section-about">
-      <div class="container about">
-        <div class="about-text">
-          <h2>프로 7단 서중휘가 직접 지도합니다</h2>
-          <p>
-            서울 유명 바둑도장에서 18년간 수석사범으로 학생들을 지도한 경험을
-            바탕으로, 기초부터 입단까지 체계적인 커리큘럼을 제공합니다.
-          </p>
-          <ul class="list">
-            <li>실전 중심 훈련과 복기</li>
-            <li>AI 분석을 통한 약점 보완</li>
-            <li>정기 리그전 및 평가</li>
-          </ul>
-        </div>
-        <div class="about-image" aria-hidden="true"></div>
-      </div>
-    </section>
   </main>
 
   <!-- Lightbox Modal for Gallery -->
@@ -437,7 +370,10 @@
           <h2 class="footer-title">바로 상담</h2>
           <div class="footer-actions">
             <a class="btn btn-primary" href="tel:010-5236-2091">전화 상담</a>
-            <a class="btn btn-outline" href="#contact">상담 신청</a>
+            <a class="btn btn-kakao" href="" aria-label="카카오톡 문의">
+              <img src="./images/kakao.png" alt="" class="kakao-icon" aria-hidden="true">
+              <span>카카오톡 문의</span>
+            </a>
           </div>
         </div>
       </div>
