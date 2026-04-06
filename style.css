@@ -609,12 +609,23 @@ h1 {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
+  gap: 0.45rem;
 }
 
 .btn-phone:hover {
   background: #000;
   border-color: rgba(255, 255, 255, 0.32);
   transform: translateY(-3px);
+}
+
+.phone-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+}
+
+.phone-number {
+  white-space: nowrap;
 }
 
 .btn-outline {
@@ -893,7 +904,40 @@ h1 {
 /* Pricing */
 .section-pricing .subline {
   margin-top: -0.4rem;
-  color: var(--muted);
+  color: #000;
+}
+
+.section-pricing .section-title h2,
+.section-pricing .curriculum-label,
+.section-pricing .curriculum-tags span,
+.section-pricing .plan-name,
+.section-pricing .plan-price strong,
+.section-pricing .plan-price span,
+.section-pricing .plan-sub,
+.section-pricing .class-type-label,
+.section-pricing .class-type-tags span {
+  color: #000;
+}
+
+.section-pricing .plan-badge {
+  background: #f3f4f6;
+  color: #000;
+}
+
+.section-gallery .section-title h2,
+.section-gallery .section-title p,
+.section-info .section-title h2,
+.section-info .section-title p,
+.section-info .card-head h3,
+.section-info .hours-list .label,
+.section-info .hours-list .time,
+.section-info .note,
+.section-info .metro-badge,
+.section-info .addr-text,
+.section-info .addr-text span,
+.section-info .contact-actions .btn,
+.section-info .icon {
+  color: #000;
 }
 
 /* 커리큘럼 태그 스트립 */
@@ -1419,7 +1463,7 @@ h1 {
 
 .about-desc {
   margin: 0;
-  color: var(--about-muted);
+  color: #000;
   line-height: 1.92;
   font-size: 1.06rem;
   font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
@@ -1602,23 +1646,11 @@ h1 {
   height: 22px;
 }
 
-.cta-phone-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background var(--duration-fast) var(--easing),
-              border-color var(--duration-fast) var(--easing);
-  cursor: pointer;
-}
-
-.cta-phone-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.55);
+.cta-banner-actions .btn-phone {
+  min-height: 56px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
 }
 
 /* Fees Accordion */
@@ -1711,6 +1743,14 @@ h1 {
   border-radius: 10px;
   box-shadow: none;
   flex: 1;
+}
+
+.footer-actions .btn-phone {
+  min-height: 56px;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
 }
 
 .footer .btn-primary {
@@ -1847,29 +1887,36 @@ h1 {
   }
 
   .hero {
-    min-height: clamp(400px, 58svh, 500px);
-    min-height: clamp(400px, 58dvh, 500px);
+    min-height: clamp(460px, 64svh, 580px);
+    min-height: clamp(460px, 64dvh, 580px);
     padding: 88px 0 1.5rem;
     background-position: 82% center;
   }
 
   .hero-content {
-    min-height: calc(clamp(400px, 58svh, 500px) - 88px - 1.5rem);
-    min-height: calc(clamp(400px, 58dvh, 500px) - 88px - 1.5rem);
+    min-height: calc(clamp(460px, 64svh, 580px) - 88px - 1.5rem);
+    min-height: calc(clamp(460px, 64dvh, 580px) - 88px - 1.5rem);
   }
 
   .hero-text {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .hero-actions {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
     width: 100%;
   }
 
   .hero-actions .btn {
     width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.88rem;
+    padding: 0.75rem 0.7rem;
   }
 
   .btn-kakao {
